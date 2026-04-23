@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPK Knowledge Hub | Digital Textbook Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-wrapper">
+        <header>
+            <div class="flag-icon">🇵🇰</div>
+            <h1>KPK Knowledge Hub</h1>
+            <p class="subtitle">Search Every Topic: Class 9 & 10 Curriculum</p>
+        </header>
+
+        <section class="search-container">
+            <div class="search-box">
+                <input type="text" id="mainSearch" placeholder="Try 'Newton', 'Matrices', or 'Cells'..." onkeyup="engine.handleSearch(this.value)">
+            </div>
+            <div class="filter-pills">
+                <button class="pill active" onclick="engine.filter('All')">All Subjects</button>
+                <button class="pill" onclick="engine.filter('Physics')">Physics</button>
+                <button class="pill" onclick="engine.filter('Math')">Math</button>
+                <button class="pill" onclick="engine.filter('Biology')">Biology</button>
+                <button class="pill" onclick="engine.filter('Chemistry')">Chemistry</button>
+            </div>
+        </section>
+
+        <div id="resultsArea" class="results-grid">
+            </div>
+
+        <footer>
+            <p><strong>Service to Humanity</strong> • Khyber Pakhtunkhwa Textbook Board Content</p>
+            <p style="font-size: 0.7rem; opacity: 0.7;">Created for the students of KPK</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
